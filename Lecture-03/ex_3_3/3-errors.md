@@ -1,5 +1,5 @@
 
-# Errors
+# Errors (ALREADY UNDERSTAND)
 
 Your task is fix the errors programs and write test cases.
 Use the code in "template-test" folder as a starting point.

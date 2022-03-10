@@ -1,5 +1,5 @@
 
-# Basics:
+# Basics: (ALREADY UNDERSTAND)
 
 ## Exercise 1
 
