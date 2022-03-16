@@ -1,3 +1,4 @@
+// This was somewhat hard, I am not sure how to do the last one in this exercise
 //Select the element with the class output.
 var e = document.querySelector(".output");
 
