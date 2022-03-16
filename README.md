@@ -8,3 +8,4 @@ Was simply an introduction to the course and its contents.
 Introduced the use of Emmet, CSS and Git.
 
 # Lecture 03
+Javascript catchup.
