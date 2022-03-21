@@ -1,11 +1,17 @@
-const container = document.querySelector('.stars');
-        const items = container.querySelectorAll('.star-item')
-        container.onclick = e => {
-            const Class = e.target.classList;
-                if (!Class.contains("active")) {
-                    items.forEach(
-                    item => item.classList.remove("active")
-                );
-            console.log(e.target.getAttribute("id"));
-            Class.add("active");
-        }};
+const starsUL = document.querySelector(".stars");
+        const output = document.querySelector(".output");
+        const stars = document.querySelectorAll(".star");
+        stars.forEach((star, index) => {
+            star.starValue = (index + 1);
+            star.addEventListener("click", starRate);
+        });
+        function starRate(e) {
+            output.innerHTML = `You Rated this ${e.target.starValue} stars`;
+            stars.forEach((star, index) => {
+                if (index < e.target.starValue) {
+                    star.classList.add("orange");
+                } else {
+                    star.classList.remove("orange");
+                }
+            });
+        }

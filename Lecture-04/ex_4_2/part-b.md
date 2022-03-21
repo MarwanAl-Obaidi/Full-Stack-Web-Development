@@ -1,5 +1,5 @@
 
-# Part B (6 points)
+# Part B (6 points) Also a bonus
 
 ## Exercise 1
 
