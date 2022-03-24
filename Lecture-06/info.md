@@ -1,0 +1,1 @@
+Lecture 05 was merged with Lecture 04 and we went straight to Lecture 06!
