@@ -13,9 +13,24 @@ const App = () => {
    
   const [selected, setSelected] = useState(0)
 
+  function random_number() {
+    //Selects a random number based on the amount of anecdotes
+    const random = Math.floor(Math.random() * anecdotes.length)
+    //console log for checking
+    console.log("Random number: " + random)
+    return random
+  }
+
+  function select_quote() {
+    setSelected(random_number())
+    //console log for checking
+    console.log("In handleClick, selected: " + selected)
+  }
+
   return (
     <div>
-      {anecdotes[selected]}
+      {anecdotes[selected]} <br/>
+      <button onClick={select_quote}>Next anecdote</button>
     </div>
   )
 }
