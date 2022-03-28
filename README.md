@@ -9,3 +9,11 @@ Introduced the use of Emmet, CSS and Git.
 
 ## Lecture 03
 Javascript catchup.
+
+## Lecture 04-05
+
+
+## Lecture 06
+
+
+## Lecture 07
