@@ -1,5 +1,25 @@
 import { useState } from 'react'
 
+const Header = ({name}) => <h1>{name}</h1>
+
+const Button = ({onClick, text}) => (
+  <button onClick={onClick}>{text}</button>
+)
+
+const Statistics = (props) => {
+  console.log(props);
+  return (
+    <>
+    <h1>Statistics</h1>
+    Good: {props.good} <br/>
+    Neutral: {props.neutral} <br/>
+    Bad: {props.bad} <br/>
+    All: {props.all} <br/>
+    Average: {((props.good-props.bad) / props.all).toFixed(1)} <br/>
+    Positive: {((props.good/props.all) * 100).toFixed(1)}% <br/>
+    </>
+  )}
+
 const App = () => {
   // save clicks of each button to its own state
   const [good, setGood] = useState(0)
@@ -10,27 +30,21 @@ const App = () => {
   if(all === 0){
     return (
       <div>
-        <h1>give feedback</h1>
-        <button onClick={() => setGood(good + 1) + setAll(all + 1)}>Good</button>
-        <button onClick={() => setNeutral(neutral + 1) + setAll(all + 1)}>Neutral</button>
-        <button onClick={() => setBad(bad + 1) + setAll(all + 1)}>Bad</button>
+        <Header name = "Give feedback"/>
+        <Button onClick={() => setGood(good + 1) + setAll(all + 1)} text='Good' />
+        <Button onClick={() => setNeutral(neutral + 1) + setAll(all + 1)} text='Neutral'/>
+        <Button onClick={() => setBad(bad + 1) + setAll(all + 1)} text='Bad'/>
       </div>
     )
   }
   
   return (
     <div>
-      <h1>Give feedback</h1>
-      <button onClick={() => setGood(good + 1) + setAll(all + 1)}>Good</button>
-      <button onClick={() => setNeutral(neutral + 1) + setAll(all + 1)}>Neutral</button>
-      <button onClick={() => setBad(bad + 1) + setAll(all + 1)}>Bad</button>
-      <h1>Statistics</h1>
-      Good: {good} <br/>
-      Neutral: {neutral} <br/>
-      Bad: {bad} <br/>
-      All: {all} <br/>
-      Average: {((good-bad) / all).toFixed(2)} <br/>
-      Positive: {((good/all) * 100).toFixed(2)}% <br/>
+      <Header name = "Give feedback"/>
+      <Button onClick={() => setGood(good + 1) + setAll(all + 1)} text='Good' />
+      <Button onClick={() => setNeutral(neutral + 1) + setAll(all + 1)} text='Neutral'/>
+      <Button onClick={() => setBad(bad + 1) + setAll(all + 1)} text='Bad'/>
+      <Statistics good={good} neutral={neutral} bad={bad} all={all}/>
     </div>
   )
 }
