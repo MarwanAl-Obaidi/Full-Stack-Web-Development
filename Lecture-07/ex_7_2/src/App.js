@@ -40,7 +40,6 @@ const App = () => {
   const max_vote_quote = anecdotes[total_votes.indexOf(max_vote)]
 
   if (max_vote === 0) {
-    <h1>Anecdote of the day</h1>
     return (
       <div>
         <h1>Anecdote of the day</h1>
