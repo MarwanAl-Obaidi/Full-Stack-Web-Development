@@ -1,11 +1,7 @@
-import React from 'react';
+import ReactDOM from 'react-dom'
+import App from './App'
 
-function App() {
-  return (
-    <div className="App">
-      Hello World
-    </div>
-  );
-}
-
-export default App;
+ReactDOM.render(
+  <App />, 
+  document.getElementById('root')
+)
