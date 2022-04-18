@@ -18,3 +18,9 @@ First React app. Learned how to refactor components.
 
 ## Lecture 07
 Worked on a counter app.
+
+## Lecture 08-09
+Started working on a phonebook app.
+
+## Lecture 10
+Completed phonebook app.

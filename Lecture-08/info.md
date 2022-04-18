@@ -1,3 +1,5 @@
+Lecture 09 was merged with Lecture 08!
+
 # Exercises and Assignment
 
 ##  Lecture 8

@@ -1,0 +1,16 @@
+h2 {
+  color: rgb(28, 79, 245);
+}
+
+.success {
+  color: green;
+  padding-top: 5px;
+  font-size: 15px;
+}
+
+.error {
+  color: red;
+  padding-top: 5px;
+  font-size: 15px;
+}
+
