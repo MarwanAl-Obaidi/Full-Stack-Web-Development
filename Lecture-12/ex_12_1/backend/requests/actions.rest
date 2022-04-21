@@ -1,0 +1,119 @@
+# My Variables
+@contentType = application/json
+@baseurl = http://localhost:3001/api
+
+### GET Request
+GET {{baseurl}}/notes/
+Content-Type: {{contentType}
+
+### GET Request
+GET {{baseurl}}/notes/625158890e75b4ff2a109ab9
+Content-Type: {{contentType}
+
+### GET Request (does not exist)
+GET {{baseurl}}/notes/625158890e75b4ff2a109ab9999
+Content-Type: {{contentType}
+
+### DELET Request
+DELETE {{baseurl}}/notes/625159762eac6b3190f8349a
+Content-Type: application/json
+
+### DELET Request  (does not exist)
+DELETE {{baseurl}}/notes/6251a0ed1317e5dff269f8aa
+Content-Type: application/json
+
+### unknown end point
+GET {{baseurl}}/notesaa/15
+Content-Type: {{contentType}
+
+### POST Request
+POST {{baseurl}}/notes/
+Content-Type: application/json
+
+{
+    "content":"Testing REST client",
+    "important":true
+}
+
+
+###
+POST {{baseurl}}/notes/ HTTP/1.1
+content-type: application/json
+
+{
+    "content":"Another REST client",
+    "important": false
+}
+
+###
+POST {{baseurl}}/notes/ HTTP/1.1
+content-type: application/json
+
+{
+    "content":"Testing POST",
+    "important": false
+}
+
+
+### PUT  Request
+PUT {{baseurl}}/notes/625158890e75b4ff2a109ab9
+Content-Type: application/json
+
+{
+    "content":"Testing PUT request 3",
+    "important":true
+}
+
+### GET Request
+GET {{baseurl}}/users
+Content-Type: {{contentType}
+
+
+###
+POST {{baseurl}}/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "marwan",
+    "name": "Marwan",
+    "password": "12345"
+}
+
+### POST Request
+POST {{baseurl}}/notes/
+Content-Type: application/json
+
+{
+    "content":"Testing REST client",
+    "important":true,
+    "userId": "625d752c8632ff41521cc8ef"
+}
+
+### POST Request
+POST {{baseurl}}/login
+Content-Type: application/json
+
+{
+    "username":"sami",
+    "password":"sami"
+}
+
+### POST Request
+POST {{baseurl}}/login
+Content-Type: application/json
+
+{
+    "username":"sami",
+    "password":"smi"
+}
+
+### POST Request
+POST {{baseurl}}/notes/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbWkiLCJpZCI6IjYyNWQ3NTJjODYzMmZmNDE1MjFjYzhlZiIsImlhdCI6MTY1MDI5NTQzOH0.fL_5Nz8qLK1lyvL0UjfI9cY8dz6qlN6uCZAohKA0odY
+
+{
+    "content":"Testing REST client",
+    "important":true,
+    "userId": "625d752c8632ff41521cc8ef"
+}
